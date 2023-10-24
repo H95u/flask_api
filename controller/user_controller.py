@@ -5,6 +5,11 @@ from flask import request
 obj = user_model()
 
 
+@app.route('/')
+def hello_world():
+    return "hello world!"
+
+
 @app.route('/api/users')
 def all_users():
     return obj.get_users()
